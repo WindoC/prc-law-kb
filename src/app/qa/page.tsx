@@ -195,7 +195,7 @@ export default function QAPage() {
                       id="questionInput"
                       className="form-control"
                       rows={4}
-                      placeholder="請詳細描述您的法律問題（例如：「如果我在澳門犯了盜竊罪，可能面臨什麼刑罰？」）"
+                      placeholder="請詳細描述您的法律問題（例如：「如果我在中國犯了盜竊罪，可能面臨什麼刑罰？」）"
                       value={question}
                       onChange={(e) => setQuestion(e.target.value)}
                       disabled={loading}

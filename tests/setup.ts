@@ -1,6 +1,6 @@
 /**
  * Test Setup Configuration
- * Sets up the testing environment for the Macau Law Knowledge Base
+ * Sets up the testing environment for the PRC Law Knowledge Base
  */
 
 import { jest } from '@jest/globals';

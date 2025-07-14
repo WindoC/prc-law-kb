@@ -1,5 +1,5 @@
 /**
- * Jest Configuration for Macau Law Knowledge Base
+ * Jest Configuration for PRC Law Knowledge Base
  * Configures testing environment for TypeScript, React, and Node.js components
  */
 

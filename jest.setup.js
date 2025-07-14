@@ -1,7 +1,7 @@
 require('dotenv').config({ path: '.env.test' });
 
 /**
- * Jest Setup File for Macau Law Knowledge Base
+ * Jest Setup File for PRC Law Knowledge Base
  * Configures global test environment and imports
  */
 

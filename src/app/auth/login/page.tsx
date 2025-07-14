@@ -85,7 +85,7 @@ export default function LoginPage() {
           <Col md={6} lg={5} xl={4}>
             <Card className="shadow-lg border-0">
               <Card.Header className="bg-primary text-white text-center py-4">
-                <h2 className="mb-0">登入澳門法律知識庫</h2>
+                <h2 className="mb-0">登入中國法律知識庫</h2>
                 <p className="mb-0 mt-2 opacity-75">選擇您的登入方式</p>
               </Card.Header>
               

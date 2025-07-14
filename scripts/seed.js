@@ -66,7 +66,7 @@ async function seed() {
     await pool.query(`
       INSERT INTO search_history (user_id, query, document_ids, tokens_used, created_at)
       VALUES 
-        ($1, '澳門基本法', ARRAY[1, 2, 3], 150, NOW() - INTERVAL '1 day'),
+        ($1, '中國基本法', ARRAY[1, 2, 3], 150, NOW() - INTERVAL '1 day'),
         ($1, '刑法典', ARRAY[4, 5, 6], 200, NOW() - INTERVAL '2 hours'),
         ($1, '民法典', ARRAY[7, 8, 9], 180, NOW() - INTERVAL '30 minutes')
       ON CONFLICT DO NOTHING;
@@ -77,8 +77,8 @@ async function seed() {
     await pool.query(`
       INSERT INTO qa_history (user_id, question, answer, document_ids, tokens_used, created_at)
       VALUES 
-        ($1, '什麼是澳門基本法？', '澳門基本法是澳門特別行政區的憲制性法律文件...', ARRAY[1, 2], 300, NOW() - INTERVAL '3 hours'),
-        ($1, '刑法典的適用範圍是什麼？', '澳門刑法典適用於在澳門特別行政區境內實施的犯罪行為...', ARRAY[4, 5], 250, NOW() - INTERVAL '1 hour')
+        ($1, '什麼是中國基本法？', '中國基本法是中國特別行政區的憲制性法律文件...', ARRAY[1, 2], 300, NOW() - INTERVAL '3 hours'),
+        ($1, '刑法典的適用範圍是什麼？', '中國刑法典適用於在中國特別行政區境內實施的犯罪行為...', ARRAY[4, 5], 250, NOW() - INTERVAL '1 hour')
       ON CONFLICT DO NOTHING;
     `, [userId]);
     
@@ -96,8 +96,8 @@ async function seed() {
     await pool.query(`
       INSERT INTO consultant_messages (conversation_id, role, content, document_ids, tokens_used, created_at)
       VALUES 
-        ($1, 'user', '請問澳門基本法的主要內容是什麼？', NULL, 0, NOW() - INTERVAL '10 minutes'),
-        ($1, 'assistant', '澳門基本法是澳門特別行政區的憲制性法律文件，主要內容包括：\n\n1. 總則\n2. 中央和澳門特別行政區的關係\n3. 居民的基本權利和義務\n4. 政治體制\n5. 經濟\n6. 文化和社會事務\n7. 對外事務\n8. 本法的解釋和修改\n9. 附則', ARRAY[1, 2], 500, NOW() - INTERVAL '9 minutes');
+        ($1, 'user', '請問中國基本法的主要內容是什麼？', NULL, 0, NOW() - INTERVAL '10 minutes'),
+        ($1, 'assistant', '中國基本法是中國特別行政區的憲制性法律文件，主要內容包括：\n\n1. 總則\n2. 中央和中國特別行政區的關係\n3. 居民的基本權利和義務\n4. 政治體制\n5. 經濟\n6. 文化和社會事務\n7. 對外事務\n8. 本法的解釋和修改\n9. 附則', ARRAY[1, 2], 500, NOW() - INTERVAL '9 minutes');
     `, [conversationId]);
     
     console.log(`Created sample conversation with ID: ${conversationId}`);

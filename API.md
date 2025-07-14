@@ -1,6 +1,6 @@
 # API Documentation
 
-This document provides comprehensive information about all API endpoints in the Macau Law Knowledge Base application.
+This document provides comprehensive information about all API endpoints in the PRC Law Knowledge Base application.
 
 ## Base URL
 
@@ -210,7 +210,7 @@ All API responses follow a consistent format:
   "data": {
     "suggestions": [
       "Maximum penalty for murder",
-      "Property rights in Macau",
+      "Property rights in PRC",
       "Employment law regulations"
     ]
   }
@@ -228,7 +228,7 @@ All API responses follow a consistent format:
 **Request Body:**
 ```json
 {
-  "question": "What is the maximum penalty for murder in Macau?",
+  "question": "What is the maximum penalty for murder in PRC?",
   "context": {
     "category": "criminal_law"
   }
@@ -367,7 +367,7 @@ All API responses follow a consistent format:
 ```json
 {
   "conversationId": "uuid",
-  "message": "Can you explain property rights in Macau?",
+  "message": "Can you explain property rights in PRC?",
   "model": "gemini-2.5-flash-preview-05-20"
 }
 ```
@@ -378,7 +378,7 @@ All API responses follow a consistent format:
   "success": true,
   "data": {
     "messageId": "uuid",
-    "response": "Property rights in Macau are governed by...",
+    "response": "Property rights in PRC are governed by...",
     "sourceDocuments": [...],
     "tokensUsed": 180
   }
@@ -414,7 +414,7 @@ All API responses follow a consistent format:
       {
         "id": "uuid",
         "role": "assistant",
-        "content": "Property rights in Macau...",
+        "content": "Property rights in PRC...",
         "sourceDocuments": [...],
         "tokensUsed": 180,
         "createdAt": "2024-01-01T12:01:00Z"
@@ -727,7 +727,7 @@ All API responses follow a consistent format:
   "data": {
     "law": {
       "id": "uuid",
-      "title": "Criminal Code of Macau",
+      "title": "Criminal Code of PRC",
       "content": "Full legal document content...",
       "lawNumber": "Law No. 6/2017",
       "category": "criminal_law",
@@ -761,7 +761,7 @@ All API responses follow a consistent format:
     "laws": [
       {
         "id": "uuid",
-        "title": "Criminal Code of Macau",
+        "title": "Criminal Code of PRC",
         "lawNumber": "Law No. 6/2017",
         "category": "criminal_law",
         "effectiveDate": "2017-12-01",
@@ -842,4 +842,4 @@ The system supports webhooks for real-time notifications:
 
 Webhook payloads include event type, timestamp, and relevant data.
 
-This API documentation provides comprehensive coverage of all endpoints and their usage patterns for the Macau Law Knowledge Base application.
+This API documentation provides comprehensive coverage of all endpoints and their usage patterns for the PRC Law Knowledge Base application.

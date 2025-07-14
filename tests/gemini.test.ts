@@ -94,7 +94,7 @@ describe('Gemini AI Service', () => {
 
       expect(mockModels.generateContent).toHaveBeenCalledWith({
         model: 'gemini-2.5-flash-preview-05-20',
-        contents: expect.stringContaining('作為澳門法律專家'),
+        contents: expect.stringContaining('作為中國法律專家'),
       });
       expect(result).toEqual({
         keywords: ['keyword1', 'keyword2', 'keyword3'],
@@ -144,7 +144,7 @@ describe('Gemini AI Service', () => {
   describe('Legal Answer Generation', () => {
     test('should generate legal answer successfully', async () => {
       const mockResponse = {
-        text: 'According to Macau law, contracts require...',
+        text: 'According to PRC law, contracts require...',
         usageMetadata: {
           totalTokenCount: 100,
         },
@@ -172,10 +172,10 @@ describe('Gemini AI Service', () => {
 
       expect(mockModels.generateContent).toHaveBeenCalledWith({
         model: 'gemini-2.5-flash-preview-05-20',
-        contents: expect.stringContaining('你是澳門法律專家AI助手'),
+        contents: expect.stringContaining('你是中國法律專家AI助手'),
       });
       expect(result).toEqual({
-        answer: 'According to Macau law, contracts require...',
+        answer: 'According to PRC law, contracts require...',
         tokenCount: 100,
       });
     });
@@ -228,14 +228,14 @@ describe('Gemini AI Service', () => {
 
       const mockMessages = [
         { role: 'user' as const, content: 'What about employment law?' },
-        { role: 'assistant' as const, content: 'Employment law in Macau...' },
+        { role: 'assistant' as const, content: 'Employment law in PRC...' },
       ];
 
       const result = await geminiService.generateConsultantResponse(mockMessages);
 
       expect(mockModels.generateContent).toHaveBeenCalledWith({
         model: 'gemini-2.5-flash-preview-05-20',
-        contents: expect.stringContaining('你是專業的澳門法律顧問AI助手'),
+        contents: expect.stringContaining('你是專業的中國法律顧問AI助手'),
       });
       expect(result).toBe('Based on the legal documents provided...');
     });
@@ -300,7 +300,7 @@ describe('Gemini AI Service', () => {
         model: 'gemini-2.5-flash-preview-05-20',
         contents: mockContents,
         config: expect.objectContaining({
-          systemInstruction: expect.stringContaining('你是專業的澳門法律顧問AI助手'),
+          systemInstruction: expect.stringContaining('你是專業的中國法律顧問AI助手'),
         }),
       });
       expect(result).toEqual(mockResponse);

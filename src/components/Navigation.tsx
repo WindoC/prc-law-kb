@@ -68,7 +68,7 @@ export default function Navigation({ remainingTokens }: NavigationProps) {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <Link className="navbar-brand fw-bold" href="/">
-            澳門法律知識庫
+            中國法律知識庫
           </Link>
           <div className="navbar-nav ms-auto">
             <div className="spinner-border spinner-border-sm text-light" role="status">
@@ -85,7 +85,7 @@ export default function Navigation({ remainingTokens }: NavigationProps) {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <Link className="navbar-brand fw-bold" href="/">
-            澳門法律知識庫
+            中國法律知識庫
           </Link>
           <div className="navbar-nav ms-auto">
             <Link className="nav-link" href="/">登入</Link>
@@ -99,7 +99,7 @@ export default function Navigation({ remainingTokens }: NavigationProps) {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand fw-bold" href="/">
-          澳門法律知識庫
+          中國法律知識庫
         </Link>
         
         <button 

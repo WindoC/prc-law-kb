@@ -1,6 +1,6 @@
-# Macau Law Knowledge Base Web Application
+# PRC Law Knowledge Base Web Application
 
-A comprehensive AI-powered legal search, Q&A, and consultation platform for Macau law, built with Next.js, PostgreSQL, and Google Gemini AI.
+A comprehensive AI-powered legal search, Q&A, and consultation platform for PRC law, built with Next.js, PostgreSQL, and Google Gemini AI.
 
 ## Overview of Core Logic / Architecture
 
@@ -334,7 +334,7 @@ npm run start
 
 ## License
 
-This project is proprietary software for Macau Law Knowledge Base.
+This project is proprietary software for PRC Law Knowledge Base.
 
 ## Support
 

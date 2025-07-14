@@ -43,14 +43,14 @@ describe('Gemini AI Service', () => {
 
   describe('generateSearchKeywords', () => {
     it('should generate search keywords from query', async () => {
-      const mockResult = { keywords: ['刑法', '謀殺', '刑罰', '法律條文', '澳門法律'], tokenCount: 15 };
+      const mockResult = { keywords: ['刑法', '謀殺', '刑罰', '法律條文', '中國法律'], tokenCount: 15 };
       mockGenerateSearchKeywords.mockResolvedValue(mockResult);
 
       const query = 'Maximum penalty for murder';
       const result = await generateSearchKeywords(query);
       
       expect(result).toEqual(mockResult);
-      expect(result.keywords).toEqual(['刑法', '謀殺', '刑罰', '法律條文', '澳門法律']);
+      expect(result.keywords).toEqual(['刑法', '謀殺', '刑罰', '法律條文', '中國法律']);
       expect(result.keywords.length).toBeLessThanOrEqual(5);
       expect(result.tokenCount).toBe(15);
       expect(mockGenerateSearchKeywords).toHaveBeenCalledWith(query);

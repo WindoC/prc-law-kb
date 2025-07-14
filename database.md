@@ -1,6 +1,6 @@
 # Database Documentation
 
-This document provides comprehensive information about the database schema and setup for the Macau Law Knowledge Base application.
+This document provides comprehensive information about the database schema and setup for the PRC Law Knowledge Base application.
 
 ## Database Tables Overview
 
@@ -494,4 +494,4 @@ FROM consultant_conversations
 WHERE updated_at >= now() - interval '7 days';
 ```
 
-This database schema provides a robust foundation for the Macau Law Knowledge Base application with proper security, performance optimization, and comprehensive audit trails.
+This database schema provides a robust foundation for the PRC Law Knowledge Base application with proper security, performance optimization, and comprehensive audit trails.

@@ -1,4 +1,4 @@
--- Database Schema for Macau Law Knowledge Base Web Application
+-- Database Schema for PRC Law Knowledge Base Web Application
 -- Execute this SQL in your Supabase SQL editor
 
 -- Enable necessary extensions

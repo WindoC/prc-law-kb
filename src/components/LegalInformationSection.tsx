@@ -27,7 +27,7 @@ export default function LegalInformationSection() {
                 </Accordion.Header>
                 <Accordion.Body>
                   <div className="legal-content">
-                    <p className="lead">歡迎使用「澳門法律知識庫」（以下簡稱「本平台」）！</p>
+                    <p className="lead">歡迎使用「中國法律知識庫」（以下簡稱「本平台」）！</p>
                     <p>在使用本服務前，請您詳閱以下使用條款。當您註冊、登入或以任何方式使用本平台時，即表示您已閱讀、理解並同意接受以下所有條款。</p>
 
                     <h4>1. 服務說明</h4>

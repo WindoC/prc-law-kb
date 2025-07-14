@@ -85,10 +85,10 @@ function LandingPage() {
           <Row className="align-items-center min-vh-100">
             <Col lg={6}>
               <h1 className="display-4 fw-bold mb-4">
-                澳門法律知識庫
+                中國法律知識庫
               </h1>
               <p className="lead mb-4">
-                運用人工智能技術，為您提供澳門法律搜索、問答和諮詢服務
+                運用人工智能技術，為您提供中國法律搜索、問答和諮詢服務
               </p>
 
               {/* LoginForm 元件 */}
@@ -142,7 +142,7 @@ function LandingPage() {
           <Row className="text-center mb-5">
             <Col>
               <h2 className="fw-bold">為什麼選擇我們？</h2>
-              <p className="text-muted">專業、準確、便捷的澳門法律服務</p>
+              <p className="text-muted">專業、準確、便捷的中國法律服務</p>
             </Col>
           </Row>
           <Row className="g-4">
@@ -220,7 +220,7 @@ function DashboardPage() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <Container>
           <Link className="navbar-brand fw-bold" href="/">
-            澳門法律知識庫
+            中國法律知識庫
           </Link>
           <div className="navbar-nav ms-auto">
             <div className="nav-item dropdown">

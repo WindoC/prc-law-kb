@@ -59,7 +59,7 @@ describe('HomePage Legal Documents Integration', () => {
     renderWithAuth(<HomePage />)
     
     // Wait for component to load
-    await screen.findByText('澳門法律知識庫')
+    await screen.findByText('中國法律知識庫')
     
     // Check if legal information section is present
     expect(screen.getByText('法律資訊與條款')).toBeInTheDocument()
@@ -70,7 +70,7 @@ describe('HomePage Legal Documents Integration', () => {
     renderWithAuth(<HomePage />)
     
     // Wait for component to load
-    await screen.findByText('澳門法律知識庫')
+    await screen.findByText('中國法律知識庫')
     
     // Check for Terms of Use
     expect(screen.getByText('服務條款 (Terms of Use)')).toBeInTheDocument()
@@ -89,10 +89,10 @@ describe('HomePage Legal Documents Integration', () => {
     renderWithAuth(<HomePage />)
     
     // Wait for component to load
-    await screen.findByText('澳門法律知識庫')
+    await screen.findByText('中國法律知識庫')
     
     // Check for key legal content
-    expect(screen.getByText(/歡迎使用「澳門法律知識庫」/)).toBeInTheDocument()
+    expect(screen.getByText(/歡迎使用「中國法律知識庫」/)).toBeInTheDocument()
     expect(screen.getByText(/僅供資訊參考之用/)).toBeInTheDocument()
     expect(screen.getByText(/我們收集的資訊/)).toBeInTheDocument()
   })
@@ -101,7 +101,7 @@ describe('HomePage Legal Documents Integration', () => {
     renderWithAuth(<HomePage />)
     
     // Wait for component to load
-    await screen.findByText('澳門法律知識庫')
+    await screen.findByText('中國法律知識庫')
     
     // Check for accordion structure
     const accordionButtons = screen.getAllByRole('button')
@@ -124,7 +124,7 @@ describe('HomePage Legal Documents Integration', () => {
     renderWithAuth(<HomePage />)
     
     // Wait for component to load
-    await screen.findByText('澳門法律知識庫')
+    await screen.findByText('中國法律知識庫')
     
     // Check for Font Awesome icons (they should be present in the DOM)
     const contractIcon = document.querySelector('.fa-file-contract')

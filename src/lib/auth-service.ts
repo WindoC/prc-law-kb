@@ -60,14 +60,14 @@ export class AuthService {
     
     const accessToken = jwt.sign(payload, this.JWT_SECRET, {
       expiresIn: this.JWT_EXPIRES_IN,
-      issuer: 'macau-law-kb',
-      audience: 'macau-law-kb-users',
+      issuer: 'prc-law-kb',
+      audience: 'prc-law-kb-users',
     } as jwt.SignOptions);
     
     const refreshToken = jwt.sign(payload, this.JWT_SECRET, {
       expiresIn: this.REFRESH_EXPIRES_IN,
-      issuer: 'macau-law-kb',
-      audience: 'macau-law-kb-users',
+      issuer: 'prc-law-kb',
+      audience: 'prc-law-kb-users',
     } as jwt.SignOptions);
     
     return { accessToken, refreshToken, user };
@@ -80,8 +80,8 @@ export class AuthService {
    */
   verifyToken(token: string): any {
     return jwt.verify(token, this.JWT_SECRET, {
-      issuer: 'macau-law-kb',
-      audience: 'macau-law-kb-users',
+      issuer: 'prc-law-kb',
+      audience: 'prc-law-kb-users',
     });
   }
   

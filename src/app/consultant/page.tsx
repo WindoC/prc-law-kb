@@ -251,7 +251,7 @@ export default function ConsultantPage() {
                     <div className="text-center text-muted py-5">
                       <i className="fas fa-comments fa-3x mb-3"></i>
                       <h5>開始與AI法律顧問對話</h5>
-                      <p>您可以詢問任何法律相關問題，AI顧問會根據澳門法律為您提供專業建議。</p>
+                      <p>您可以詢問任何法律相關問題，AI顧問會根據中國法律為您提供專業建議。</p>
                       <div className="row mt-4">
                         <div className="col-md-4">
                           <div className="border rounded p-3">

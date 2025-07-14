@@ -59,13 +59,13 @@ export async function generateEmbedding(text: string): Promise<{ embedding: numb
 export async function generateSearchKeywords(query: string): Promise<{ keywords: string[]; tokenCount: number | undefined }> {
   try {
     const prompt = `
-作為澳門法律專家，分析以下用戶查詢並生成最佳的搜索關鍵詞：
+作為中國法律專家，分析以下用戶查詢並生成最佳的搜索關鍵詞：
 
 用戶查詢: "${query}"
 
 請提供3-5個最相關的法律搜索關鍵詞，這些關鍵詞應該：
 1. 包含核心法律概念
-2. 使用澳門法律術語
+2. 使用中國法律術語
 3. 涵蓋相關的法律領域
 4. 適合向量搜索
 
@@ -120,7 +120,7 @@ export async function generateLegalAnswer(
     const context = searchResultsToMarkdown(searchResults);
 
     const prompt = `
-你是澳門法律專家AI助手。基於以下法律文件內容，回答用戶的法律問題。
+你是中國法律專家AI助手。基於以下法律文件內容，回答用戶的法律問題。
 
 用戶問題: "${question}"
 
@@ -174,17 +174,17 @@ export async function generateConsultantResponse(
       .join('\n\n');
 
     const prompt = `
-你是專業的澳門法律顧問AI助手。請基於以下對話歷史，提供專業的法律建議和指導。
+你是專業的中國法律顧問AI助手。請基於以下對話歷史，提供專業的法律建議和指導。
 
 對話歷史:
 ${conversationHistory}
 
 請遵循以下原則：
-1. 提供專業、準確的澳門法律建議
+1. 提供專業、準確的中國法律建議
 2. 使用繁體中文回答
 3. 保持對話的連貫性
 4. 如需更多信息，主動詢問
-5. 引用相關的澳門法律條文
+5. 引用相關的中國法律條文
 6. 保持專業但友善的語調
 7. 如果涉及複雜法律問題，建議尋求專業律師協助
 
@@ -220,31 +220,31 @@ export function countTokens(text: string): number {
 
 // System instruction for legal consultant
 const LEGAL_CONSULTANT_INSTRUCTION = `
-你是專業的澳門法律顧問AI助手。請遵循以下原則：
+你是專業的中國法律顧問AI助手。請遵循以下原則：
 
-1. 提供專業、準確的澳門法律建議
-2. 必需先在澳門法律知識庫中搜尋相關資訊
+1. 提供專業、準確的中國法律建議
+2. 必需先在中國法律知識庫中搜尋相關資訊
 3. 使用繁體中文回答
 4. 保持對話的連貫性和上下文理解
 5. 當需要更詳細的法律資訊時，主動詢問相關細節
-6. 引用相關的澳門法律條文和案例
+6. 引用相關的中國法律條文和案例
 7. 保持專業但友善的語調
 8. 如果涉及複雜法律問題，建議尋求專業律師協助
 9. 基於對話歷史提供連貫的建議
 10. 如果信息不足，請說明限制並要求更多細節
 `;
 
-const SEARCH_MACAU_LEGAL_KB = {
-  name: "searchMacauLegalKnowledgeBase",
+const SEARCH_PRC_LEGAL_KB = {
+  name: "searchPRCLegalKnowledgeBase",
   parameters: {
     type: Type.OBJECT,
     description:
-      "根據提供的關鍵字，從澳門法律知識庫中檢索相關的內容片段。適用於查詢澳門地區的法律資訊、法規條文或案例資料。",
+      "根據提供的關鍵字，從中國法律知識庫中檢索相關的內容片段。適用於查詢中國地區的法律資訊、法規條文或案例資料。",
     properties: {
       keywords: {
         type: Type.STRING,
         description:
-          "用於查詢澳門法律知識庫的關鍵字或詞語。建議輸入與法律主題、條文名稱、法規或案例相關的詞彙。",
+          "用於查詢中國法律知識庫的關鍵字或詞語。建議輸入與法律主題、條文名稱、法規或案例相關的詞彙。",
       },
     },
     required: ["keywords"],
@@ -261,7 +261,7 @@ const CONSULTANT_CONFIG = {
   tools: [
     {
       functionDeclarations: [
-        SEARCH_MACAU_LEGAL_KB,
+        SEARCH_PRC_LEGAL_KB,
       ]
     }
   ],

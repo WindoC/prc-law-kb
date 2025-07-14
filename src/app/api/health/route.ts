@@ -11,7 +11,7 @@ export async function GET() {
       timestamp: new Date().toISOString(),
       version: '1.0.0',
       environment: process.env.NODE_ENV,
-      message: 'Macau Legal Knowledge Base API is running'
+      message: 'PRC Legal Knowledge Base API is running'
     });
   } catch (error) {
     return NextResponse.json(

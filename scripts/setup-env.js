@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Environment Setup Script for Macau Law Knowledge Base
+ * Environment Setup Script for PRC Law Knowledge Base
  * Helps users set up their environment variables and validate configuration
  */
 
@@ -108,7 +108,7 @@ function validateEnvironment() {
 
 function showHelp() {
   console.log(`
-Macau Law Knowledge Base - Environment Setup
+PRC Law Knowledge Base - Environment Setup
 
 Commands:
   create    Create .env.local from .env.example with generated secrets

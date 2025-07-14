@@ -168,8 +168,8 @@ export async function POST(request: NextRequest) {
   
             for (const functionCall of functionCallsArray) {
 
-              if (functionCall.name == "searchMacauLegalKnowledgeBase") {
-                // console.log("Function call: searchMacauLegalKnowledgeBase");
+              if (functionCall.name == "searchPRCLegalKnowledgeBase") {
+                // console.log("Function call: searchPRCLegalKnowledgeBase");
                 // Extract the keywords from the function call arguments
                 const keywords = functionCall.args.keywords;
                 // console.log("Keywords for search:", keywords);

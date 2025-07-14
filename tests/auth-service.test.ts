@@ -73,8 +73,8 @@ describe('Authentication Service', () => {
         'test-jwt-secret-key-for-testing-only',
         {
           expiresIn: '1h',
-          issuer: 'macau-law-kb',
-          audience: 'macau-law-kb-users',
+          issuer: 'prc-law-kb',
+          audience: 'prc-law-kb-users',
         }
       );
 
@@ -95,14 +95,14 @@ describe('Authentication Service', () => {
 
       expect(accessTokenCall[2]).toEqual({
         expiresIn: '1h',
-        issuer: 'macau-law-kb',
-        audience: 'macau-law-kb-users',
+        issuer: 'prc-law-kb',
+        audience: 'prc-law-kb-users',
       });
 
       expect(refreshTokenCall[2]).toEqual({
         expiresIn: '7d',
-        issuer: 'macau-law-kb',
-        audience: 'macau-law-kb-users',
+        issuer: 'prc-law-kb',
+        audience: 'prc-law-kb-users',
       });
     });
   });
@@ -124,8 +124,8 @@ describe('Authentication Service', () => {
         'valid-token',
         'test-jwt-secret-key-for-testing-only',
         {
-          issuer: 'macau-law-kb',
-          audience: 'macau-law-kb-users',
+          issuer: 'prc-law-kb',
+          audience: 'prc-law-kb-users',
         }
       );
 
@@ -406,8 +406,8 @@ describe('Authentication Service', () => {
       const result = await authService.refreshAccessToken('valid-refresh-token');
 
       expect(jwt.verify).toHaveBeenCalledWith('valid-refresh-token', 'test-jwt-secret-key-for-testing-only', {
-        issuer: 'macau-law-kb',
-        audience: 'macau-law-kb-users',
+        issuer: 'prc-law-kb',
+        audience: 'prc-law-kb-users',
       });
       expect(mockDb.query).toHaveBeenCalledWith('SELECT * FROM users WHERE id = $1', [mockUser.id]);
       expect(result).toEqual({
