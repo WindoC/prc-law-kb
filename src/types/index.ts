@@ -96,33 +96,8 @@ export interface ConsultantMessage {
 // Document and Law Types
 export interface DocumentMetadata {
   db_id: number;
-  law_id: string;
   title: string;
   link: string;
-  bo: {
-    group: string;
-    bo_id: string;
-    public_date: string;
-    page: number;
-  };
-  relate: {
-    altered?: string[];
-    abolished?: string[];
-    partially_abolished?: string[];
-    abolishing?: string[];
-  };
-}
-
-export interface LawDocument {
-  id: number;
-  link: string;
-  law_id: string;
-  title: string;
-  bo: any;
-  relate: any;
-  content: string;
-  status: number;
-  update_on: string;
 }
 
 // System Settings Types

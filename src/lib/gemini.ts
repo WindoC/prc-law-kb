@@ -100,7 +100,7 @@ export async function generateSearchKeywords(query: string): Promise<{ keywords:
 export const searchResultsToMarkdown = (searchResults: Array<{ content: string; metadata: any; similarity: number }>): string => {
   return searchResults
       .map((result, index) => `
-文件 ${index + 1} / ${result.metadata.law_id} - ${result.metadata.title} / 第 ${result.metadata.loc.lines.from} 至 ${result.metadata.loc.lines.to} 行 / (相關度: ${Math.round(result.similarity * 100)}%):
+文件 ${index + 1} / ${result.metadata.title} / 第 ${result.metadata.loc.lines.from} 至 ${result.metadata.loc.lines.to} 行 / (相關度: ${Math.round(result.similarity * 100)}%):
 ${result.content}
 ---`)
       .join('\n');

@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
           metadata: result.metadata,
           // link: result.metadata?.link || `#`,
           similarity: result.similarity,
-          // title: result.metadata?.law_id + " - " + result.metadata?.title || `文件 #${result.id}`
+          // title: result.metadata?.title || `文件 #${result.id}`
         })),
         tokens_used: actualTokens,
         remaining_tokens: remaining_tokens || 0

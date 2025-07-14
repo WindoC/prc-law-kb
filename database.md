@@ -11,7 +11,7 @@ This document provides comprehensive information about the database schema and s
 - **Columns**:
   - `id` (bigserial, PRIMARY KEY): Unique identifier for each document chunk
   - `content` (text): The actual text content of the document chunk
-  - `metadata` (jsonb): Additional information about the document (law_id, title, section, etc.)
+  - `metadata` (jsonb): Additional information about the document (title, section, etc.)
   - `embedding` (vector(3072)): Vector embedding for similarity search using Gemini embeddings
 
 #### `users`

@@ -155,12 +155,12 @@ describe('Gemini AI Service', () => {
       const mockDocuments = [
         { 
           content: 'Contract law document 1',
-          metadata: { law_id: 'LAW001', title: 'Contract Law', loc: { lines: { from: 1, to: 10 } } },
+          metadata: { title: 'Contract Law', loc: { lines: { from: 1, to: 10 } } },
           similarity: 0.85,
         },
         { 
           content: 'Contract law document 2',
-          metadata: { law_id: 'LAW002', title: 'Civil Code', loc: { lines: { from: 20, to: 30 } } },
+          metadata: { title: 'Civil Code', loc: { lines: { from: 20, to: 30 } } },
           similarity: 0.78,
         },
       ];
@@ -364,7 +364,6 @@ describe('Gemini AI Service', () => {
         {
           content: 'Legal content 1',
           metadata: {
-            law_id: 'LAW001',
             title: 'Contract Law',
             loc: { lines: { from: 1, to: 10 } },
           },
@@ -373,7 +372,6 @@ describe('Gemini AI Service', () => {
         {
           content: 'Legal content 2',
           metadata: {
-            law_id: 'LAW002',
             title: 'Civil Code',
             loc: { lines: { from: 20, to: 30 } },
           },

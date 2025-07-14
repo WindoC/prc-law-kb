@@ -148,7 +148,7 @@ export default function QAPage() {
   };
 
   const copyQA = () => {
-    const content = `**問題:** ${submittedQuestion}\n\n**回答:** ${answer}\n\n**參考來源:**\n${sources.map((source, index) => `${index + 1}. ${source.metadata.law_id} - ${source.metadata.title} (第 ${source.metadata.loc.lines.from} 至 ${source.metadata.loc.lines.to} 行) (相關度: ${Math.round(source.similarity * 100)}%)`).join('\n')}`;
+    const content = `**問題:** ${submittedQuestion}\n\n**回答:** ${answer}\n\n**參考來源:**\n${sources.map((source, index) => `${index + 1}. ${source.metadata.title} (第 ${source.metadata.loc.lines.from} 至 ${source.metadata.loc.lines.to} 行) (相關度: ${Math.round(source.similarity * 100)}%)`).join('\n')}`;
     navigator.clipboard.writeText(content);
     setWarning('已複製到剪貼板');
     setTimeout(() => setWarning(null), 3000);
@@ -307,7 +307,7 @@ export default function QAPage() {
                                 </span>
                               </div>
                               <div className="d-flex justify-content-between align-items-start mb-2">
-                                <h6 className="card-title text-success">{source.metadata.law_id} - {source.metadata.title}</h6>
+                                <h6 className="card-title text-success">{source.metadata.title}</h6>
                               </div>
                               <div className="card-text">
                                 <div 

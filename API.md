@@ -147,7 +147,6 @@ All API responses follow a consistent format:
         "id": 123,
         "content": "Document content...",
         "metadata": {
-          "law_id": "uuid",
           "title": "Criminal Code",
           "section": "Article 123"
         },

@@ -91,7 +91,7 @@ export default function SearchPage() {
   };
 
   const copyResult = (result: any) => {
-    const content = `**搜索結果**\n\n**標題:** ${result.metadata.law_id} - ${result.metadata.title}\n\n**段落位置:** 第 ${result.metadata.loc.lines.from} 至 ${result.metadata.loc.lines.to} 行\n\n**連結:** ${result.metadata.link}${fragmentIdentifiers[result.id] ? `#${fragmentIdentifiers[result.id]}` : ''}\n\n**相關度:** ${Math.round(result.similarity * 100)}%\n\n**內容:**\n${result.content}`;
+    const content = `**搜索結果**\n\n**標題:** ${result.metadata.title}\n\n**段落位置:** 第 ${result.metadata.loc.lines.from} 至 ${result.metadata.loc.lines.to} 行\n\n**連結:** ${result.metadata.link}${fragmentIdentifiers[result.id] ? `#${fragmentIdentifiers[result.id]}` : ''}\n\n**相關度:** ${Math.round(result.similarity * 100)}%\n\n**內容:**\n${result.content}`;
     navigator.clipboard.writeText(content);
     setWarning('已複製到剪貼板');
     setTimeout(() => setWarning(null), 3000);
@@ -215,7 +215,7 @@ export default function SearchPage() {
                             </span>
                           </div>
                           <div className="d-flex justify-content-between align-items-start mb-2">
-                            <h5 className="card-title text-primary">{result.metadata.law_id} - {result.metadata.title}</h5>
+                            <h5 className="card-title text-primary">{result.metadata.title}</h5>
                           </div>
                           <div className="card-text">
                             <div 
