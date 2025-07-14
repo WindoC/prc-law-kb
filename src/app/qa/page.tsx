@@ -300,7 +300,7 @@ export default function QAPage() {
                                   第 {source.metadata.loc.lines.from} 至 {source.metadata.loc.lines.to} 行
                                 </span>
                                 <span className="badge bg-warning text-white">
-                                  <a target="_blank" rel="noopener noreferrer"  href={`${source.metadata.link}${fragmentIdentifiers[source.id] ? `#${fragmentIdentifiers[source.id]}` : ''}`}>印務局文件</a>
+                                  <a target="_blank" rel="noopener noreferrer"  href={`${source.metadata.link}${fragmentIdentifiers[source.id] ? `#${fragmentIdentifiers[source.id]}` : ''}`}>國家法律法規資料庫</a>
                                 </span>
                                 <span className="badge bg-primary">
                                   相關度: {Math.round(source.similarity * 100)}%

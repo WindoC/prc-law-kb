@@ -207,7 +207,7 @@ export default function SearchPage() {
                                 rel="noopener noreferrer" 
                                 href={`${result.metadata.link}${fragmentIdentifiers[result.id] ? `#${fragmentIdentifiers[result.id]}` : ''}`}
                               >
-                                印務局文件
+                                國家法律法規資料庫
                               </a>
                             </span>
                             <span className="badge bg-primary">
