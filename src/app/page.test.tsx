@@ -10,22 +10,6 @@ jest.mock('@/lib/auth-client', () => ({
   logout: jest.fn().mockResolvedValue(undefined)
 }))
 
-// Mock CaptchaWidget
-jest.mock('@/components/CaptchaWidget', () => {
-  return function MockCaptchaWidget() {
-    return <div data-testid="captcha-widget">Mock CAPTCHA</div>
-  }
-})
-
-// Mock captcha validation
-jest.mock('@/lib/captcha', () => ({
-  validateCaptchaToken: jest.fn().mockReturnValue(true),
-  CAPTCHA_ERRORS: {
-    MISSING_TOKEN: 'Missing CAPTCHA token',
-    VERIFICATION_FAILED: 'CAPTCHA verification failed',
-    EXPIRED_TOKEN: 'CAPTCHA token expired'
-  }
-}))
 
 // Mock AuthContext
 const mockAuthContext = {
